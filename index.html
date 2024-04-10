@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Tax Calculator</title>
+</head>
+<body>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span id="modal-close" class="close">Close</span>
+          <div class="result-container">
+            <p id="tax-result"></p>
+          </div>
+        </div>
+      </div>
+  <div class="container">
+    <form id="tax-form">
+      <div class="input-container">
+        <label for="gross-annual-income">Gross Annual Income:</label>
+        <input type="number" id="gross-annual-income" name="gross-annual-income" placeholder="Enter gross annual income" required>
+        <div class="error-icon">!</div>
+        <!-- <span class="badge question-mark"></span> -->
+      </div>
+      <div class="input-container">
+        <label for="extra-income">Extra Income:</label>
+        <input type="number" id="extra-income" name="extra-income" placeholder="Enter extra income" required>
+        <div class="error-icon">!</div>
+        <!-- <span class="badge question-mark"></span> -->
+      </div>
+      <div class="input-container">
+        <label for="age">Age:</label>
+        <select id="age" name="age" required>
+          <option value="" selected disabled hidden>-- Select Age Group --</option>
+          <option value="less_than_40">Less than 40</option>
+          <option value="between_40_and_60">Between 40 and 60</option>
+          <option value="greater_than_60">Greater than 60</option>
+        </select>
+        <div class="error-icon">!</div>
+        <!-- <span class="badge question-mark"></span> -->
+      </div>
+      <div class="input-container">
+        <label for="deductions">Total Applicable Deductions:</label>
+        <input type="number" id="deductions" name="deductions" placeholder="Enter total applicable deductions" required>
+        <div class="error-icon">!</div>
+        <!-- <span class="badge question-mark"></span> -->
+      </div>
+      
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="modal-close" class="close">Close</span>
+      <p id="tax-result"></p>
+    </div>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
